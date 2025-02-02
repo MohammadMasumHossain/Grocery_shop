@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="grocery.css">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <!-- tailwind and daisy cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- fontawesome cdn -->
+    <script src="https://kit.fontawesome.com/dfd8b92c46.js" crossorigin="anonymous"></script>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+            
+                headerColor:'#FFFFFF',
+                'btn-bg':'rgba(23, 152, 0, 1)',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body class=" container mx-auto font-sora bg-gradient-to-b from-[#FFFFFF] to-[#EFEBE3] max-w-screen-2xl">
+    <header class=" items-center " >
+          <nav class="flex container mx-auto justify-between pt-10  pb-10 items-center justify-center">
+            <div>
+                <img  class="max-w-36"src="c2-assets/logo-header.png" alt="">
+            </div>
+            <div class="space-x-8 font-sora text-xl font-normal">
+                <a href="#">Product</a>
+                <a href="#">Services</a>
+                <a href="#">Contact us</a>
+            </div>
+            <div class="space-x-6">
+                <i class="fa-solid fa-magnifying-glass text-2xl"></i>
+                <i class="fa-solid fa-cart-shopping text-2xl"></i>
+                <button class="border-2 px-7 py-2 rounded-lg"><a href="#">Login</a></button>
+                <button class="border-2 px-7 py-2 rounded-lg bg-btn-bg"><a href="#">Register</a></button>
+            </div>
+          </nav>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+    
+</body>
+</html>

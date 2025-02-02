@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="grocery.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+
+    <!-- poppings font  -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind and DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome CDN -->
+    <script src="https://kit.fontawesome.com/dfd8b92c46.js" crossorigin="anonymous"></script>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                headerColor:'#FFFFFF',
+                'btn-bg':'rgba(23, 152, 0, 1)',
+                'hero-p' :'rgba(17, 17, 17, 1)',
+                'card-bg': 'rgba(239, 235, 227, 1)',
+                'card-text':'rgba(17, 17, 17, 1)',
+                'card2-bg' :'rgb(99, 183, 109)',
+                'card2-bg2':'rgb(16, 40, 97)',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body class="container mx-auto font-sora  max-w-screen-2xl">
+    <!-- Header with Navigation -->
+    <header class="items-center bg-gradient-to-b from-[#FFFFFF] to-[#EFEBE3]">
+        <nav class="flex sm:px-0 lg:px-36 container mx-auto justify-between pt-10  items-center">
+            <!-- Logo -->
+            <div>
+                <img class="max-w-36" src="c2-assets/logo-header.png" alt="Logo">
+            </div>
+
+            <!-- Desktop Menu: Hidden on mobile -->
+            <div class="hidden lg:flex space-x-8 font-sora text-xl font-normal">
+                <a href="#">Product</a>
+                <a href="#">Services</a>
+                <a href="#">Contact us</a>
+            </div>
+
+            <!-- Icons and Buttons: Hidden on mobile -->
+            <div class="hidden lg:flex space-x-6">
+                <i class="fa-solid fa-magnifying-glass text-2xl"></i>
+                <i class="fa-solid fa-cart-shopping text-2xl"></i>
+                <button class="border-2 px-7 py-2 rounded-lg"><a href="#">Login</a></button>
+                <button class="border-2 px-7 py-2 rounded-lg bg-btn-bg"><a href="#">Register</a></button>
+            </div>
+
+            <!-- Hamburger Icon: Visible only on mobile -->
+            <div class="lg:hidden flex items-center">
+                <button id="hamburger-icon" class="text-3xl">
+                    <i class="fa-solid fa-bars"></i> <!-- Hamburger icon -->
+                </button>
+            </div>
+        </nav>
+
+
+        <!-- hero section start -->
+         <div class=" pt-32  flex flex-col items-center justify-center text-center ">
+          <h1 class="font-sora text-4xl lg:text-6xl font-semibold ">Freshness <span class="text-btn-bg">You Can <br>
+            Count</span> On, Prices You’ll Love!</h1>
+            <P class="font-sora text-xl font-normal text-hero-p py-8">Shop your daily essentials at unbeatable prices. From fresh produce to pantry <br>staples, we’ve got you covered every day!</P>
+            <img  class="[h-838px] object-cover "src="c2-assets/hero-vegetables.png" alt="">
+
+         </div>
+
+       
+      
+
+    </header>
+
+    <!-- Mobile Menu: Hidden by default -->
+    <div id="mobile-menu" class="lg:hidden hidden absolute top-16 left-0 right-0 bg-white shadow-lg rounded-lg p-4">
+        <a href="#" class="block py-2">Product</a>
+        <a href="#" class="block py-2">Services</a>
+        <a href="#" class="block py-2">Contact us</a>
+        <div class="space-x-6 py-4">
+            <i class="fa-solid fa-magnifying-glass text-2xl"></i>
+            <i class="fa-solid fa-cart-shopping text-2xl"></i>
+        </div>
+        <div class="space-x-6 py-4">
+            <button class="border-2 px-7 py-2 rounded-lg"><a href="#">Login</a></button>
+            <button class="border-2 px-7 py-2 rounded-lg bg-btn-bg"><a href="#">Register</a></button>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <main>
+
+      <section class=" container mx-auto  pb-36">
+        <h3 class="pt-36 px-36 pb-12 text-btn-bg font-sora font-semibold text-3xl">Services</h3>
+          
+        <div class="grid px-36 grid-col-1 md:grid-cols-2 lg:grid-cols-3   gap-6">
+          <div class="border rounded-lg overflow-hidden  max-w-[424px] max-h-[367px] bg-card-bg px-8 pt-8 pb-11 space-y-6 flex flex-col items-center justify-center">
+            <img class="max-w-full h-auto bg-white rounded-full px-4 py-4 mt-8 " src="c2-assets/service.png" alt="">
+            <h3 class="text-center font-sora font-semibold text-2xl">24/7 Services</h3>
+            <p class="text-center font-sora font-light text-xl card-text pb-11">Companies can offer 24/7 customer support.</p>
+          </div>
+
+          <div class="border rounded-lg overflow-hidden  max-w-[424px] max-h-[367px] bg-card-bg px-8 pt-8 pb-11 space-y-6 flex flex-col items-center justify-center">
+            <img class="max-w-full h-auto bg-white rounded-full px-4 py-4 mt-8 " src="c2-assets/delivery.png" alt="">
+            <h3 class="text-center font-sora font-semibold text-2xl">24/7 Services</h3>
+            <p class="text-center font-sora font-light text-xl card-text pb-11">You can expect your package within24 hours.</p>
+          </div>
+
+          <div class="border rounded-lg  overflow-hidden  max-w-[424px] max-h-[367px] bg-card-bg px-8 pt-8 pb-11 space-y-6 flex flex-col items-center justify-center">
+            <img class="max-w-full h-auto bg-white rounded-full px-4 py-4 mt-8 " src="c2-assets/healthy.png" alt="">
+            <h3 class="text-center font-sora font-semibold text-2xl">24/7 Services</h3>
+            <p class="text-center font-sora font-light text-xl card-text pb-11">Many foods are both healthy and tasty. </p>
+          </div>
+          
+        </div>
+      </section>
+
+
+
+
+      <section class="bg-card-bg pb-24 ">
+        <h3 class=" container mx-auto px-36 text-btn-bg font-sora font-semibold pt-32 text-4xl mb-12">Popular Products</h3>
+      
+        <div class=" container mx-auto   ">
+          
+
+
+          <div class=" lg:flex gap-6 px-36 ">
+           <div class=" grid col-span-2 row-span-3  relative max-w-[424px] max-h-[402px] rounded-lg bg-gradient-to-br from-green-500 to-green-300   pt-10 pb-20 px-10  ">
+ 
+             <h4 class="text-white font-sora font-semibold text-2xl">30% off</h4>
+             <p class="font-sora">Discover a world of treats, toys, and essentials handpicked for you.</p>
+             <button class="border w-28 h-10 px-4  bg-white rounded-lg text-black"> <a  href="#">Buy Now</a> </button> 
+             <img class=" absolute bottom-0 right-0 w-[60%] pr-4 " src="c2-assets/vegetable-offer.png" alt="">
+           </div>
+ 
+      <div class="grid  sm:grid-col-2 lg:grid-cols-3 grid-rows-3 gap-6">
+              <!-- popular products small card -->
+           
+              <div class="flex space-x-4 max-w-[275px] max-h-[118px] py-4 pr-4 pl-4 border rounded-lg bg-white">
+                <div>
+                  <img  class="max-w-16 max-h-16 border  rounded-lg card-bg "src="c2-assets/onion.png" alt="">
+                </div>
+                <div class="grid grid-cols-1">
+                  <div class="flex space-x-3">
+                    <i class="fa-solid fa-star text-yellow-400 "></i>
+                    <p class="font-sora font-normal text-base">4.5</p>
+                  </div>
+                  
+                  <div>
+                  <p class="font-sora font-medium text-xl">Onion 1KG</p>
+                  <p class="font-sora font-medium text-base">$39.99</p>
+                  </div>
+                  
+                </div>
+    
+              </div>
+                
+              <div class="flex space-x-4 max-w-[275px] max-h-[118px] py-4 pl-4 border rounded-lg bg-white">
+                <div>
+                  <img  class="max-w-16 max-h-16 border  rounded-lg card-bg "src="c2-assets/tomato.png" alt="">
+                </div>
+                <div class="grid grid-cols-1">
+                  <div class="flex space-x-3">
+                    <i class="fa-solid fa-star text-yellow-400 "></i>
+                    <p class="font-sora font-normal text-base">4.5</p>
+                  </div>
+                  
+                  <div>
+                  <p class="font-sora font-medium text-xl">Onion 1KG</p>
+                  <p class="font-sora font-medium text-base">$39.99</p>
+                  </div>
+                  
+                </div>
+    
+              </div>
+      
+               <!-- popular products small card -->
+              <div class="flex space-x-4 max-w-[275px] max-h-[118px] py-4 pl-4 border rounded-lg bg-white">
+                <div>
+                  <img  class="max-w-16 max-h-16 border  rounded-lg card-bg "src="c2-assets/potato.png" alt="">
+                </div>
+                <div class="grid grid-cols-1">
+                  <div class="flex space-x-3">
+                    <i class="fa-solid fa-star text-yellow-400 "></i>
+                    <p class="font-sora font-normal text-base">4.5</p>
+                  </div>
+                  
+                  <div>
+                  <p class="font-sora font-medium text-xl">Onion 1KG</p>
+                  <p class="font-sora font-medium text-base">$39.99</p>
+                  </div>
+                  
+                </div>
+    
+              </div>
+    
+               <!-- popular products small card -->
+              <div class="flex space-x-4 max-w-[275px] max-h-[118px] py-4 pl-4 border rounded-lg bg-white">
+                <div>
+                  <img  class="max-w-16 max-h-16 border  rounded-lg card-bg "src="c2-assets/tomato.png" alt="">
+                </div>
+                <div class="grid grid-cols-1">
+                  <div class="flex space-x-3">
+                    <i class="fa-solid fa-star text-yellow-400 "></i>
+                    <p class="font-sora font-normal text-base">4.5</p>
+                  </div>
+                  
+                  <div>
+                  <p class="font-sora font-medium text-xl">Onion 1KG</p>
+                  <p class="font-sora font-medium text-base">$39.99</p>
+                  </div>
+                  
+                </div>
+    
+              </div>
+    
+              <!-- popular products small card -->
+              <div class="flex space-x-4 max-w-[275px] max-h-[118px] py-4 pl-4 border rounded-lg bg-white">
+                <div>
+                  <img  class="max-w-16 max-h-16 border  rounded-lg card-bg "src="c2-assets/potato.png" alt="">
+                </div>
+                <div class="grid grid-cols-1">
+                  <div class="flex space-x-3">
+                    <i class="fa-solid fa-star text-yellow-400 "></i>
+                    <p class="font-sora font-normal text-base">4.5</p>
+                  </div>
+                  
+                  <div>
+                  <p class="font-sora font-medium text-xl">Onion 1KG</p>
+                  <p class="font-sora font-medium text-base">$39.99</p>
+                  </div>
+                  
+                </div>
+    
+              </div>
+    
+              <!-- popular products small card -->
+    
+              <div class="flex space-x-4 max-w-[275px] max-h-[118px] py-4 pl-4 border rounded-lg bg-white">
+                <div>
+                  <img  class="max-w-16 max-h-16 border  rounded-lg card-bg "src="c2-assets/potato.png" alt="">
+                </div>
+                <div class="grid grid-cols-1">
+                  <div class="flex space-x-3">
+                    <i class="fa-solid fa-star text-yellow-400 "></i>
+                    <p class="font-sora font-normal text-base">4.5</p>
+                  </div>
+                  
+                  <div>
+                  <p class="font-sora font-medium text-xl">Onion 1KG</p>
+                  <p class="font-sora font-medium text-base">$39.99</p>
+                  </div>
+                  
+                </div>
+    
+              </div>
+    
+    
+              <!-- popular products small card -->
+              <div class="flex space-x-4 max-w-[275px] max-h-[118px] py-4 pl-4 border rounded-lg bg-white">
+                <div>
+                  <img  class="max-w-16 max-h-16 border  rounded-lg card-bg "src="c2-assets/potato.png" alt="">
+                </div>
+                <div class="grid grid-cols-1">
+                  <div class="flex space-x-3">
+                    <i class="fa-solid fa-star text-yellow-400 "></i>
+                    <p class="font-sora font-normal text-base">4.5</p>
+                  </div>
+                  
+                  <div>
+                  <p class="font-sora font-medium text-xl">Onion 1KG</p>
+                  <p class="font-sora font-medium text-base">$39.99</p>
+                  </div>
+                  
+                </div>
+    
+              </div>
+    
+              <!-- popular products small card -->
+    
+              <div class="flex space-x-4 max-w-[275px] max-h-[118px] py-4 pl-4 border rounded-lg bg-white">
+                <div>
+                  <img  class="max-w-16 max-h-16 border  rounded-lg card-bg "src="c2-assets/onion.png" alt="">
+                </div>
+                <div class="grid grid-cols-1">
+                  <div class="flex space-x-3">
+                    <i class="fa-solid fa-star text-yellow-400 "></i>
+                    <p class="font-sora font-normal text-base">4.5</p>
+                  </div>
+                  
+                  <div>
+                  <p class="font-sora font-medium text-xl">Onion 1KG</p>
+                  <p class="font-sora font-medium text-base">$39.99</p>
+                  </div>
+                  
+                </div>
+    
+              </div>
+    
+    
+              <!-- popular products small card -->
+    
+              <div class="flex space-x-4 max-w-[275px] max-h-[118px] py-4 pl-4 border rounded-lg bg-white">
+                <div>
+                  <img  class="max-w-16 max-h-16 border  rounded-lg card-bg "src="c2-assets/tomato.png" alt="">
+                </div>
+                <div class="grid grid-cols-1">
+                  <div class="flex space-x-3">
+                    <i class="fa-solid fa-star text-yellow-400 "></i>
+                    <p class="font-sora font-normal text-base">4.5</p>
+                  </div>
+                  
+                  <div>
+                  <p class="font-sora font-medium text-xl">Onion 1KG</p>
+                  <p class="font-sora font-medium text-base">$39.99</p>
+                  </div>
+                  
+                </div>
+    
+              </div>
+      </div>
+   
+   
+           
+           </div>
+ 
+          </div>
+        
+
+
+        </div>
+      </section> 
+
+
+
+      <!-- section 3 start here  -->
+
+      <section class="mt-36 container mx-auto mb-[140px]">
+        <h3 class="pt-32 px-36 pb-10 text-btn-bg font-sora font-semibold text-3xl">Arrival & Offers</h3>
+        <div class=" px-36 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-10 gap-5">
+
+
+          <!-- card1 start -->
+          <div class="col-span-1 md:col-span-6 flex  space-x-40 border rounded-lg bg-green-800">
+            <div class="py-12 pl-10 space-y-8">
+              <img src="c2-assets/dawat-logo.png" alt="">
+              <button>
+                <a class="w-[280px] h-[65px] text-white border border-[#63B76D] rounded-lg bg-card2-bg py-4 px-10" href="#">Cook Exotic Dishes</a>
+              </button>
+              <h2 class="font-pop font-bold text-4xl text-white">UP to 20% OFF</h2>
+            </div>
+            <div class="pt-8">
+              <img class="pt-16" src="c2-assets/dawat-mock-up.png" alt="">
+            </div>
+          </div>
+          <!-- card1 end -->
+
+
+
+          
+          <!-- card2 start -->
+          <div class="col-span-1 md:col-span-4  flex border rounded-lg bg-[#102861]">
+            <div class="pt-5 pl-6 pb-9 space-y-8">
+              <img src="c2-assets/india-gate-logo.png" alt="">
+              <button>
+                <a class="w-[280px] h-[65px] text-white border border-[#2A4D97] rounded-lg bg-card2-bg2 py-4 px-10" href="#">World's No.1 Rice</a>
+              </button>
+              <h2 class="font-pop font-bold text-4xl text-white">UP to 40% OFF</h2>
+            </div>
+            <div class="pt-16 pl-6">
+              <img class="" src="c2-assets/india-gate-mock-up.png" alt="">
+            </div>
+          </div>
+          <!-- card2 end -->
+        </div>
+      </section>
+      
+      
+      
+       
+      
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        
+    </footer>
+
+    <!-- JavaScript for mobile menu toggle -->
+    <script>
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburgerIcon.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden'); // Toggle visibility of the mobile menu
+        });
+    </script>
+</body>
+</html>
