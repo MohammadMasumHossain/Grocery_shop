@@ -46,7 +46,7 @@
 <body class="container mx-auto font-sora  max-w-screen-2xl">
     <!-- Header with Navigation -->
     <header class="items-center bg-gradient-to-b from-[#FFFFFF] to-[#EFEBE3]">
-        <nav class="flex sm:px-0 lg:px-36 container mx-auto justify-between pt-10  items-center">
+        <nav class="flex sm:px-0 lg:border-hidden border border-2  border-green-600 pb-8  lg:px-36 container mx-auto justify-between pt-10  items-center">
             <!-- Logo -->
             <div>
                 <img class="max-w-36" src="c2-assets/logo-header.png" alt="Logo">
@@ -64,7 +64,7 @@
                 <i class="fa-solid fa-magnifying-glass text-2xl"></i>
                 <i class="fa-solid fa-cart-shopping text-2xl"></i>
                 <button class="border-2 px-7 py-2 rounded-lg"><a href="#">Login</a></button>
-                <button class="border-2 px-7 py-2 rounded-lg bg-btn-bg"><a href="#">Register</a></button>
+                <button class="border-2 px-7 py-2 rounded-lg bg-btn-bg  "><a href="#">Register</a></button>
             </div>
 
             <!-- Hamburger Icon: Visible only on mobile -->
@@ -78,9 +78,9 @@
 
         <!-- hero section start -->
          <div class=" pt-32  flex flex-col items-center justify-center text-center ">
-          <h1 class="font-sora text-4xl lg:text-6xl font-semibold ">Freshness <span class="text-btn-bg">You Can <br>
+          <h1 class="font-sora text-4xl lg:text-6xl font-semibold  animate-bounce ">Freshness <span class="text-btn-bg">You Can <br>
             Count</span> On, Prices You’ll Love!</h1>
-            <P class="font-sora text-xl font-normal text-hero-p py-8">Shop your daily essentials at unbeatable prices. From fresh produce to pantry <br>staples, we’ve got you covered every day!</P>
+            <P class="font-sora  text-xl font-normal text-hero-p py-8">Shop your daily essentials at unbeatable prices. From fresh produce to pantry <br>staples, we’ve got you covered every day!</P>
             <img  class="[h-838px] object-cover "src="c2-assets/hero-vegetables.png" alt="">
 
          </div>
@@ -106,12 +106,12 @@
     </div>
 
     <!-- Main content -->
-    <main>
+    <main  class="mb-80">
 
       <section class=" container mx-auto  pb-36">
-        <h3 class="pt-36 px-36 pb-12 text-btn-bg font-sora font-semibold text-3xl">Services</h3>
+        <h3 class="pt-36 px-8 lg:px-36 pb-12 text-btn-bg font-sora font-semibold text-3xl">Services</h3>
           
-        <div class="grid px-36 grid-col-1 md:grid-cols-2 lg:grid-cols-3   gap-6">
+        <div class="grid px-8 lg:px-36 justify-center grid-col-1 md:grid-cols-2 lg:grid-cols-3   gap-6">
           <div class="border rounded-lg overflow-hidden  max-w-[424px] max-h-[367px] bg-card-bg px-8 pt-8 pb-11 space-y-6 flex flex-col items-center justify-center">
             <img class="max-w-full h-auto bg-white rounded-full px-4 py-4 mt-8 " src="c2-assets/service.png" alt="">
             <h3 class="text-center font-sora font-semibold text-2xl">24/7 Services</h3>
@@ -137,14 +137,14 @@
 
 
       <section class="bg-card-bg pb-24 ">
-        <h3 class=" container mx-auto px-36 text-btn-bg font-sora font-semibold pt-32 text-4xl mb-12">Popular Products</h3>
+        <h3 class=" container mx-auto sm: px-8 lg:px-36 text-btn-bg font-sora font-semibold pt-32 text-4xl mb-12">Popular Products</h3>
       
         <div class=" container mx-auto   ">
           
 
 
-          <div class=" lg:flex gap-6 px-36 ">
-           <div class=" grid col-span-2 row-span-3  relative max-w-[424px] max-h-[402px] rounded-lg bg-gradient-to-br from-green-500 to-green-300   pt-10 pb-20 px-10  ">
+          <div class=" lg:flex gap-6 sm: px-8 lg:px-36 ">
+           <div class=" grid   col-span-2 row-span-3  relative max-w-[424px] max-h-[402px] rounded-lg bg-gradient-to-br from-green-500 to-green-300   pt-10 pb-20 px-10  ">
  
              <h4 class="text-white font-sora font-semibold text-2xl">30% off</h4>
              <p class="font-sora">Discover a world of treats, toys, and essentials handpicked for you.</p>
@@ -152,10 +152,10 @@
              <img class=" absolute bottom-0 right-0 w-[60%] pr-4 " src="c2-assets/vegetable-offer.png" alt="">
            </div>
  
-      <div class="grid  sm:grid-col-2 lg:grid-cols-3 grid-rows-3 gap-6">
+      <div class="grid  grid-cols-2 grid-rows-5 lg:grid-cols-3 lg:grid-rows-3 gap-6 sm:mt-4 md:mt-0">
               <!-- popular products small card -->
            
-              <div class="flex space-x-4 max-w-[275px] max-h-[118px] py-4 pr-4 pl-4 border rounded-lg bg-white">
+              <div class="flex space-x-4 max-w-[270px] max-h-[118px] py-4 pr-4 pl-4  border rounded-lg bg-white">
                 <div>
                   <img  class="max-w-16 max-h-16 border  rounded-lg card-bg "src="c2-assets/onion.png" alt="">
                 </div>
@@ -352,23 +352,58 @@
 
 
 
+      <!-- new section start -->
+
+      <div class="max-w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div class="collapse collapse-plus bg-base-200 my-4 sm:my-6 md:my-8">
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div class="collapse-title text-xl sm:text-2xl md:text-3xl font-medium"> How can I find the prices of the products?</div>
+          <div class="collapse-content">
+            <p>Product prices are listed on each item’s page.</p>
+          </div>
+        </div>
+      
+        <div class="collapse collapse-plus bg-base-200 my-4 sm:my-6 md:my-8">
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title text-xl sm:text-2xl md:text-3xl font-medium">Do you offer delivery or pick-up services?          </div>
+          <div class="collapse-content">
+            <p>Yes! We offer both home delivery and in-store pick-up options. </p>
+          </div>
+        </div>
+      
+        <div class="collapse collapse-plus bg-base-200 my-4 sm:my-6 md:my-8">
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title text-xl sm:text-2xl md:text-3xl font-medium">Do you offer international shipping?</div>
+          <div class="collapse-content">
+            <p>Currently, we only offer domestic delivery.</p>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      
+      <!-- new section end -->
+
+
+
       <!-- section 3 start here  -->
 
-      <section class="mt-36 container mx-auto mb-[140px]">
+      <section class="mt-10 container  mx-auto mb-[140px]">
         <h3 class="pt-32 px-36 pb-10 text-btn-bg font-sora font-semibold text-3xl">Arrival & Offers</h3>
         <div class=" px-36 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-10 gap-5">
 
 
           <!-- card1 start -->
-          <div class="col-span-1 md:col-span-6 flex  space-x-40 border rounded-lg bg-green-800">
-            <div class="py-12 pl-10 space-y-8">
+          <div class=" flex md:col-span-6 space-x-40 border rounded-lg bg-green-800">
+            <div class="  py-12 pl-10 space-y-8">
               <img src="c2-assets/dawat-logo.png" alt="">
               <button>
                 <a class="w-[280px] h-[65px] text-white border border-[#63B76D] rounded-lg bg-card2-bg py-4 px-10" href="#">Cook Exotic Dishes</a>
               </button>
               <h2 class="font-pop font-bold text-4xl text-white">UP to 20% OFF</h2>
             </div>
-            <div class="pt-8">
+            <div class= "pt-8">
               <img class="pt-16" src="c2-assets/dawat-mock-up.png" alt="">
             </div>
           </div>
@@ -378,7 +413,7 @@
 
           
           <!-- card2 start -->
-          <div class="col-span-1 md:col-span-4  flex border rounded-lg bg-[#102861]">
+          <div class=" md:col-span-4  flex border rounded-lg bg-[#102861]">
             <div class="pt-5 pl-6 pb-9 space-y-8">
               <img src="c2-assets/india-gate-logo.png" alt="">
               <button>
@@ -396,26 +431,7 @@
 
 
 
-      <!-- last begining -->
-      <section class="bg-[#EFEBE3]   container mx-auto rounded-3xl grid grid-cols-1 md:grid-cols-2 pb-[2.5%]  ">
-
-        <div class=" pt-14 ml-[10%]">
-          <img src="c2-assets/vegetable-busket.png" alt="">
-        </div>
-        <div class="space-y-6 pt-24 sm:pl-10 ">
-          <h2 class="font-sora font-semibold text-4xl text-black">Get Grocery News!</h2>
-          <p class="font-sora text-xl text-black font-normal ">Exclusive training tips, ticks, product deals and more.</p>
-          <input class="py-4 px-24" type="email" placeholder="Enter email..."> <br>
-          <button class="bg-btn-bg border text-white font-sora text-xl font-normal rounded-lg px-8 py-4 ">Subscribe</button>
-        </div>
-
-
-
-      </section>
-
-      <!-- last end -->
       
-
 
        
       
@@ -426,7 +442,7 @@
     <!-- Footer -->
 
 
-    <footer class=" grid grid-cols-1 lg:grid-cols-3 items-center justify-center bg-[#179800] pt-[23rem]  pb-[9rem] px-32">
+    <footer class="   relative grid grid-cols-1 lg:grid-cols-3 items-center justify-center  bg-[#179800] lg:pt-[23rem]  pb-[9rem] px-32">
 
       <!-- footer start here -->
        <div class="space-y-3">
@@ -454,6 +470,28 @@
         <i class="fa-brands fa-youtube text-white"></i>
        </div>
       </div>
+
+
+      <!-- last begining -->
+      <section class="bg-[#EFEBE3]  -top -[14%] lg:-top-[30%]  inset-x-4 max-w-screen-xl absolute container mx-auto rounded-3xl grid grid-cols-1 md:grid-cols-2 pb-[2.5%]  ">
+
+        <div class=" pt-14 ml-[10%]">
+          <img src="c2-assets/vegetable-busket.png" alt="">
+        </div>
+        <div class="space-y-6 pt-24 sm:pl-10 ">
+          <h2 class="font-sora font-semibold text-4xl text-black">Get Grocery News!</h2>
+          <p class="font-sora text-xl text-black font-normal ">Exclusive training tips, ticks, product deals and more.</p>
+          <input class="py-4 px-24" type="email" placeholder="Enter email..."> <br>
+          <button class="bg-btn-bg border text-white font-sora text-xl font-normal rounded-lg px-8 py-4 ">Subscribe</button>
+        </div>
+
+
+
+      </section>
+
+      <!-- last end -->
+      
+
 
 
 
